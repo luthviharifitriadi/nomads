@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('hallo', function () {
-    return 'hallo teman';
-});
-
+Route::prefix('admin')
+    -> namespace('Admin')
+    -> group(function() {
+        Route::get('/', 'DashboardController@index' )
+            ->name('dashboard');
+    });
