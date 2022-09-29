@@ -71,7 +71,7 @@
                             <div class="travel-country">INDONESIA</div>
                             <div class="travel-country">Derata, Bali</div>
                                <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">View Details</a>
+                            <a href="{{ route('detail') }}" class="btn btn-travel-details px-4">View Details</a>
                         </div>
                         </div>
                      
@@ -82,7 +82,7 @@
                             <div class="travel-country">INDONESIA</div>
                             <div class="travel-country">Bromo, Malang</div>
                                <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">View Details</a>
+                            <a href="{{ route('detail') }}" class="btn btn-travel-details px-4">View Details</a>
                         </div>
                         </div>
                      
@@ -93,7 +93,7 @@
                             <div class="travel-country">INDONESIA</div>
                             <div class="travel-country">Nusa Peninda</div>
                                <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">View Details</a>
+                            <a href="{{ route('detail') }}" class="btn btn-travel-details px-4">View Details</a>
                         </div>
                         </div>
                      
@@ -104,7 +104,7 @@
                             <div class="travel-country">MIDDLE EAST</div>
                             <div class="travel-country">Dubai</div>
                                <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">View Details</a>
+                            <a href="{{ route('detail') }}" class="btn btn-travel-details px-4">View Details</a>
                         </div>
                     </div>
                 </div>
