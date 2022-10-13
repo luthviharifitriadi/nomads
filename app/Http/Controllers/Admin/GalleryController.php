@@ -74,7 +74,13 @@ class GalleryController extends Controller
      */
     public function edit($id)
     {
-        //
+       $item = Gallery::findOrFail($id);
+       $travel_packages = TravelPackage::all();
+
+       return view('pages.admin.gallery.edit', [
+            'item' => $item,
+            'travel_packages' => $travel_packages
+       ]);
     }
 
     /**
@@ -84,9 +90,19 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(GalleryRequest $request, $id)
     {
-        //
+        $data = $request->all();
+        $data['image'] = $request->file('image')->store(
+            'assets/gallery', 'public'
+        );
+
+        $item = Gallery::findorFail($id);
+
+        $item->update($data);
+
+        return redirect()->route('gallery.index');
+        
     }
 
     /**
