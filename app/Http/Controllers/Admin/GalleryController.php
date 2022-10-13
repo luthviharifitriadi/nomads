@@ -113,6 +113,9 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Gallery::FindorFail($id);
+        $item->delete();
+
+        return redirect()->route('gallery.index');
     }
 }
