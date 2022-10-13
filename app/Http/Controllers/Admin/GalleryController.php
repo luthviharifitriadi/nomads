@@ -102,7 +102,7 @@ class GalleryController extends Controller
         $item->update($data);
 
         return redirect()->route('gallery.index');
-        
+ 
     }
 
     /**
