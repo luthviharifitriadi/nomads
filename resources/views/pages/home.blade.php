@@ -80,8 +80,6 @@
                         
                     @endforeach
 
-                
-                
                 </div>
             </div> 
         </section>
