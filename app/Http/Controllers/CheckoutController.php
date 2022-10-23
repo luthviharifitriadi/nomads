@@ -49,8 +49,8 @@ class CheckoutController extends Controller
     {
         $item = TransactionDetail::findOrFail($detail_id);
 
-        $transaction = Transaction::with(['detail', 'Travel_package'])
-                        ->findOrFail($item->transaction_id);
+        $transaction = Transaction::with(['details', 'Travel_package'])
+                        ->findOrFail($item->transactions_id);
         
         if($item->is_visa)
         {
@@ -63,7 +63,7 @@ class CheckoutController extends Controller
         $transaction->save();
         $item->delete();
 
-        return redirect()->route('checkout', $item->transaction_id);
+        return redirect()->route('checkout', $item->transactions_id);
         
 
     }
