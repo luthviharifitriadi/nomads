@@ -62,7 +62,7 @@
                                             {{ $detail->username }}
                                         </td>
                                         <td class="align-middle">
-                                            {{ $detail->nationality }} s
+                                            {{ $detail->nationality }} 
                                         </td>
                                         <td class="align-middle">
                                             {{ $detail->is_visa ? '30 Days' : 'N/A' }}
