@@ -28,6 +28,7 @@
                                         </span>
                                     @enderror
                                 </div>
+
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
                                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
@@ -37,18 +38,21 @@
                                         </span>
                                     @enderror
                                 </div>
+
                                 <div class="form-group form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
                                     </label>
                                 </div>
+
                                 <button
                                     type="sumbit"
                                     class="btn btn-login btn-block"
                                 >
                                 Sign-in 
                                 </button>
+
                                 @if (Route::has('password.request'))
                                 <p class="text-center mt-4">
                                     <a  href="{{ route('password.request') }}">
@@ -56,6 +60,7 @@
                                     </a>
                                 </p>
                                 @endif  
+                                
                             </form>
                         </div>
                     </div>
