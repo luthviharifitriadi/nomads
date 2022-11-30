@@ -4,10 +4,10 @@
 
     <main class="login-container">
         <div class="container">
-            <div class="row page-login d-flex align-items-center">
-                <div class="section-left col-12 col-md-6">
+            <div class="row page-login d-flex align-items-center ">
+                <div class="section-left col-12 col-md-6  d-none d-sm-block">
                     <h1 class="mb-4">We explore the new <br> life much better</h1>
-                    <img src="/frontend/images/travel-1.jpg" alt="" class=" d-none d-sm-flex">
+                    <img src="/frontend/images/travel-1.jpg" alt="" class="d-sm-flex" >
                 </div>
                 
                 <div class="section-right col-12 col-md-4">
@@ -52,7 +52,7 @@
                                 >
                                 Sign-in 
                                 </button>
-
+                                
                                 @if (Route::has('password.request'))
                                 <p class="text-center mt-4">
                                     <a  href="{{ route('password.request') }}">
@@ -60,7 +60,6 @@
                                     </a>
                                 </p>
                                 @endif  
-                                
                             </form>
                         </div>
                     </div>

@@ -13,13 +13,13 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item  {{ request()->is('admin') ? 'active' : ' '  }} ">
                 <a class="nav-link" href="{{ route('dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
             
-            <li class="nav-item ">
+            <li class="nav-item  {{ request()->is('admin/travel-package') ? 'active' : ' '  }} ">
                 <a class="nav-link" href="{{ route('travel-package.index') }}">
                     <i class="fas fa-fw fa-hotel"></i>
                         <span>Paket Travel</span></a>

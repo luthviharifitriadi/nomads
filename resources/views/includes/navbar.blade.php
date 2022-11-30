@@ -15,10 +15,10 @@
             <div class="collapse navbar-collapse" id="navb">
                 <ul class="navbar-nav ml-auto mr-3">
                     <li class="nav-item mx-md-2">
-                        <a href="#" class="nav-link active">Home</a>
+                        <a href="{{ url('/') }}" class="nav-link {{ request()->is('/') ? 'active' : ' '  }}">Home</a>
                     </li>
                     <li class="nav-item mx-md-2">
-                        <a href="#" class="nav-link">Paket Travel</a>
+                        <a href="{{ url('paket') }}" class="nav-link {{ request()->is('paket') ? 'active' : ' '  }}">Paket Travel</a>
                     </li>
                     <li class="nav-item  dropdown">
                         <a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
