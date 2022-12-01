@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\TravelPackage;
 
 class PaketController extends Controller
 {
@@ -13,7 +14,10 @@ class PaketController extends Controller
      */
     public function index()
     {
-        return view('pages.paket_travel');
+         $items = TravelPackage::with(['galleries'])->get();
+        return view('pages.paket_travel',[
+            'items' => $items,
+        ]);
     }
 
     /**
